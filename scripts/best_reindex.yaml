@@ -1,0 +1,27 @@
+aggregator: rnn
+batch_size: 256
+ckpt_dir: reindex_step/logs
+data_dir: data
+data_names:
+- inspired
+- redial
+- redditv1.5
+- wikipedia
+decay: 0.0
+dropout_prob: 0.1
+embed_size: 4096
+embed_update_batch_size: 2048
+epochs: 200
+freeze_llm_embed: true
+ks:
+- 1
+- 5
+- 10
+- 50
+label: labels_from_llm_as_single_token
+llm_embed_path: data/llm_embedding.pt
+load_pretrained_weights: null
+lr: 0.0001
+max_minutes: 180
+negs: 1000
+print_every: 2

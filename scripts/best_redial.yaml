@@ -1,0 +1,31 @@
+aggregator: rnn
+aggregator_path: ckpts/best_aggregator/checkpoints/best.ckpt
+alpha: 0.5
+batch_size: 256
+ckpt_dir: adapt_step/recsys_model_gating/logs/agg_freeze_True
+data_dir: data
+data_names:
+- redial
+decay: 1.0
+dropout_prob: 0.1
+embed_update_batch_size: 2048
+epochs: 200
+freeze_aggregator: true
+freeze_llm_embed: true
+ks:
+- 1
+- 5
+- 10
+- 50
+llm_embed_path: data/llm_embedding.pt
+load_pretrained_weights: null
+lr: 0.001
+max_len: 128
+max_minutes: 30
+negs: 1000
+optimizer: sgd
+print_every: 10
+recsys: sasrec
+recsys_embed_size: 64
+recsys_with_bias: true
+test_only: false
