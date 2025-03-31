@@ -1,6 +1,4 @@
 # Project specific
-ckpts/*
-tools/exllamav2/*
 *.json
 *.jsonl
 *.csv
